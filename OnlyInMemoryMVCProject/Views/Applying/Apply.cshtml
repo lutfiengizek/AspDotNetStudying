@@ -1,0 +1,46 @@
+@model Candidate
+@{
+    ViewData["Title"] = "Apply For Getting Trained";
+}
+
+<div class="text-center">
+    <h3>Apply For BTK Academy Course</h3>
+</div>
+<form method ="post" asp-action="Apply">
+<div class="form-group my-2">
+    <label class="text-dark">First Name</label>
+    <input asp-for="FirstName" class="form-control"/>
+</div>
+<div class="form-group my-2">
+    <label class="text-dark">Last Name</label>
+    <input asp-for="LastName" class="form-control"/>
+</div>
+<div class="form-group my-2">
+    <label class="text-dark">E-Mail</label>
+    <input asp-for="EMail" class="form-control"/>
+</div>
+<div class="form-group my-2">
+    <label class="text-dark">Age</label>
+    <select class="form-control" asp-for="age">
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+    </select>
+</div>asdasdasdasd
+<div>
+    
+
+
+</div>
+<div class="form-group my-2">
+    <label class="text-dark">Select A Course</label>
+    <input asp-for="SelectedCourse" class="form-control"/>
+</div>
+<div>
+    <button class="form-control btn btn-primary" type="submit">Apply</button>
+</div>
+</form>
