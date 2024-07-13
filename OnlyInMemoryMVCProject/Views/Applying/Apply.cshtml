@@ -6,6 +6,7 @@
 <div class="text-center">
     <h3>Apply For BTK Academy Course</h3>
 </div>
+
 <form method ="post" asp-action="Apply">
 <div class="form-group my-2">
     <label class="text-dark">First Name</label>
@@ -30,17 +31,31 @@
         <option value="23">23</option>
         <option value="24">24</option>
     </select>
-</div>asdasdasdasd
-<div>
-    
-
-
 </div>
-<div class="form-group my-2">
-    <label class="text-dark">Select A Course</label>
-    <input asp-for="SelectedCourse" class="form-control"/>
-</div>
+<br/>
+<fieldset>
+    <legend class="text-center text-dark">Select One Course</legend>
+    <p>
+        <input id="MVC" type="radio" asp-for="SelectedCourse" value="Asp.Net Core Advanced Course" checked/>
+        <label>ASP.Net Core Advanced Course</label>
+    </p>
+    <p>
+        <input id="api" type="radio" asp-for="SelectedCourse" value="Asp.Net Core API Advanced Course" />
+        <label>ASP.Net API Core Advanced Course</label>
+    </p>
+    <p>
+        <input id="beginnerapi" type="radio" asp-for="SelectedCourse" value="Asp.Net Core API Beginner Course" />
+        <label>ASP.Net API Core Beginner Course</label>
+    </p>
+    <p>
+        <input id="beginner" type="radio" asp-for="SelectedCourse" value="Asp.Net Core Beginner Course" />
+        <label>ASP.Net Core Beginner Course</label>
+    </p>
+</fieldset>
+
 <div>
-    <button class="form-control btn btn-primary" type="submit">Apply</button>
+    <button class="btn btn-primary" asp-controller="Applying" asp-action="Apply" type="submit">Apply</button>
+    <button class="btn btn-success" asp-controller="Home" asp-action="Index" >Go To Home</button>
+    <button class="btn btn-danger" type="reset" >Reset All Inputs</button>
 </div>
 </form>
